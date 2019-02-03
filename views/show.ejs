@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+<div class="">
+    <div class="text-center container ">
+        <div class="shadow-lg m-5 yellow lighten-5 ">
+            <div class=" p-3 rounded">
+                <h2 class ="">Chapter Number : <%= data.chapter_number %></h2>
+                <h3 class=""><%= data.name_meaning.replace(/["']/g,"")%></h3>
+                
+            </div>
+            <div class="p-5 ">
+                <hr/>
+                <p class="p-tag text-muted lead"><%= data.chapter_summary.replace(/["']/g,"")%></p>
+                <a class="ui button" href="/chapter/show/<%=data.chapter_number%>/verses">verses</a>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ./partials/footer %>
